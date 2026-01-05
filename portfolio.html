@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio | Computer Science Student</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(120deg,#667eea,#764ba2);
+    color:#333;
+}
+
+/* Navbar */
+nav{
+    background:#fff;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+nav h2{
+    color:#667eea;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:#667eea;
+}
+
+/* Hero */
+.hero{
+    height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
+}
+
+.hero h1{
+    font-size:48px;
+}
+
+.hero span{
+    color:#ffd369;
+}
+
+.hero p{
+    margin:15px 0;
+    font-size:18px;
+}
+
+.hero button{
+    padding:12px 30px;
+    background:#ffd369;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.hero button:hover{
+    background:#ffb703;
+}
+
+/* Section */
+section{
+    padding:80px 10%;
+    background:#f9f9f9;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#667eea;
+    font-size:32px;
+}
+
+/* About */
+.about{
+    display:flex;
+    gap:40px;
+    align-items:center;
+}
+
+.about img{
+    width:250px;
+    border-radius:50%;
+    border:6px solid #667eea;
+}
+
+.about p{
+    font-size:16px;
+    line-height:1.7;
+}
+
+/* Skills */
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:25px;
+}
+
+.skill-box{
+    background:#fff;
+    padding:25px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.skill-box h3{
+    color:#764ba2;
+}
+
+/* Projects */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.project-card h3{
+    color:#667eea;
+}
+
+/* Contact */
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    font-size:18px;
+}
+
+.contact a{
+    display:inline-block;
+    margin-top:15px;
+    color:#fff;
+    background:#667eea;
+    padding:12px 30px;
+    border-radius:30px;
+    text-decoration:none;
+}
+
+/* Footer */
+footer{
+    background:#222;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
+
+/* Animation */
+.fade{
+    opacity:0;
+    transform:translateY(30px);
+    transition:1s;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <h2>MyPortfolio</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+    <div>
+        <h1>Hello, I'm <span>Computer Science Student</span></h1>
+        <p>Final Year | Aspiring Software Developer</p>
+        <button onclick="scrollToSection('about')">Explore More</button>
+    </div>
+</div>
+
+<!-- About -->
+<section id="about" class="fade">
+    <h2>About Me</h2>
+    <div class="about">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+        <p>
+            I am a final year Computer Science student passionate about software development,
+            web technologies, and problem solving. I enjoy building real-world projects and
+            continuously learning new skills to grow in the IT industry.
+        </p>
+    </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="fade">
+    <h2>My Skills</h2>
+    <div class="skills">
+        <div class="skill-box"><h3>Python</h3></div>
+        <div class="skill-box"><h3>Java</h3></div>
+        <div class="skill-box"><h3>HTML / CSS</h3></div>
+        <div class="skill-box"><h3>JavaScript</h3></div>
+        <div class="skill-box"><h3>MySQL</h3></div>
+        <div class="skill-box"><h3>JavaEE / JSP</h3></div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="fade">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="project-card">
+            <h3>Student Management System</h3>
+            <p>JavaEE, JSP, MySQL based CRUD application.</p>
+        </div>
+        <div class="project-card">
+            <h3>NLP Mini Project</h3>
+            <p>Word Sense Disambiguation using Python.</p>
+        </div>
+        <div class="project-card">
+            <h3>Distributed Library System</h3>
+            <p>Flask, HTML, CSS, JavaScript project.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="fade">
+    <h2>Contact Me</h2>
+    <div class="contact">
+        <p>Email: yourname@gmail.com</p>
+        <p>Phone: +95 xxxxxxxxx</p>
+        <a href="#">Download CV</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    © 2025 | Computer Science Final Year Student
+</footer>
+
+<script>
+function scrollToSection(id){
+    document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+
+// Fade animation on scroll
+const fades = document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+    fades.forEach(fade=>{
+        const pos = fade.getBoundingClientRect().top;
+        if(pos < window.innerHeight - 100){
+            fade.classList.add('show');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
